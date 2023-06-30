@@ -1,10 +1,10 @@
 
 const firstName = prompt ("Inserisci il tuo nome");
-const lastName = prompt ("Inserisci il tuo cognome")
-const kilometers = prompt("Quanti chilometri devi fare?");
+const lastName = prompt ("Inserisci il tuo cognome");
 const age = prompt("Quanti anni hai?");
+const km = prompt("Quanti chilometri devi fare?");
 const kmPrice = 0.21;
-const ridePrice = (kilometers * kmPrice);
+const price = (km * kmPrice);
 
 let minorAge = 20;
 let overAge = 40;
@@ -15,23 +15,23 @@ document.getElementById("welcome-title").innerHTML = `Benvenuto ${firstName} ${l
 document.getElementById("name").innerHTML = ` ${firstName}`
 document.getElementById("lastname").innerHTML = ` ${lastName}`
 document.getElementById("user-age").innerHTML = ` ${age}`
-document.getElementById("km").innerHTML = ` ${kilometers}`
+document.getElementById("km").innerHTML = ` ${km}`
 
 switch (true){
     case age <= 18:
-        coupon = (ridePrice / 100) * minorAge;
-        finalPrice = (ridePrice - coupon).toFixed(2);
+        coupon = (price / 100) * minorAge;
+        finalPrice = (price - coupon).toFixed(2);
         document.getElementById("ticket").innerHTML = `Il costo del biglietto è di ${finalPrice}€`;
         break;
 
     case age >= 65:
-        coupon = (ridePrice / 100) * overAge;
-        finalPrice = (ridePrice - coupon).toFixed(2);
+        coupon = (price / 100) * overAge;
+        finalPrice = (price - coupon).toFixed(2);
         document.getElementById("ticket").innerHTML = `Il costo del biglietto è di ${finalPrice}€`;
         break;
 
     default:
-        finalPrice = ridePrice.toFixed(2);
+        finalPrice = price.toFixed(2);
         document.getElementById("ticket").innerHTML = `Il costo del biglietto è di ${finalPrice}€`;
 }
 
