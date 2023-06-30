@@ -6,8 +6,8 @@ const km = prompt("Quanti chilometri devi fare?");
 const kmPrice = 0.21;
 const price = (km * kmPrice);
 
-let minorAge = 20;
-let overAge = 40;
+const minorAge = 20;
+const overAge = 40;
 let coupon = 0;
 let finalPrice = 0;
 
